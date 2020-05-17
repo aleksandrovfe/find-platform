@@ -9,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Alexandr change repo
+          want to merge
         </p>
         <a
           className="App-link"
