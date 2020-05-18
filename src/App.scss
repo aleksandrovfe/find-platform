@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.application {
+  text-align: center;
+
+  &__title {
+    color: #61dafb;
+  }
+}

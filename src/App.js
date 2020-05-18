@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 const App = () => {
   return (
-    <div className="App">
-
+    <div className="application">
+      <h1 className="application__title">Application</h1>
     </div>
   );
 }
