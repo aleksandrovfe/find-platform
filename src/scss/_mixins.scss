@@ -1,0 +1,17 @@
+@mixin button() {
+  background: #1eb4f6;
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s;
+
+  &:hover {
+    background: #159ad3;
+  }
+
+  &:active {
+    background: #0e6c94;
+  }
+}
