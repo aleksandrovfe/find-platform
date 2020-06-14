@@ -5,7 +5,6 @@ export const Posts = () => {
     return (
         <div className="posts">
             <div className="posts__wrapper">
-                <h1 className="posts__title">Application</h1>
                 <ul className="posts__list">
                     {landingData.map(post => (
                         <li className="posts__post" key={post.id}>

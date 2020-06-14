@@ -1,22 +1,4 @@
 .posts {
-  background: #1FB2FF;
-  background: -webkit-linear-gradient(top right, #1FB2FF, #0FD572);
-  background: -moz-linear-gradient(top right, #1FB2FF, #0FD572);
-  background: linear-gradient(to bottom left, #1FB2FF, #0FD572);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__wrapper {
-    max-width: 1200px;
-  }
-
-  &__title {
-    text-align: center;
-    margin: 50px 0;
-    color: White;
-    font-size: 30px;
-  }
 
   &__post {
     background-color: rgba($color: white, $alpha: 0.7);
