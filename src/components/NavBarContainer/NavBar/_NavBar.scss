@@ -1,0 +1,25 @@
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $navigation-height;
+  background-color: #3dd476;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__active-link {
+    background-color: #19b3f8;
+  }
+}
