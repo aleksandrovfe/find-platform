@@ -1,0 +1,51 @@
+.post {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 76px 41px -39px rgba(0,0,0,0.42);
+  -moz-box-shadow: 0 76px 41px -39px rgba(0,0,0,0.42);
+  box-shadow: 0 76px 41px -39px rgba(0,0,0,0.42);
+
+  &__header {
+    display: flex;
+  }
+
+  &__teacher-image {
+    width: 300px;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+  &__teacher-description {
+    margin-left: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__teacher-name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__teacher-subject {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+  }
+
+  &__button {
+    @include button();
+
+    margin: 30px 20px 0 0;
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 20px 0;
+  }
+
+  &__description {
+    font-size: 20px;
+  }
+}

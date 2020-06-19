@@ -33,4 +33,30 @@
     @include button();
     margin-right: 20px;
   }
+
+  &__teacher-information {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__teacher-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  &__teacher-description-wrapper {
+    margin-left: 20px;
+  }
+
+  &__teacher-name {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  &__teacher-experience {
+    font-size: 16px;
+    margin-top: 10px;
+  }
 }
