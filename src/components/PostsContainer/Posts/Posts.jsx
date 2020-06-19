@@ -2,7 +2,7 @@ import React from 'react'
 import {landingData} from "../../../data/landingData";
 import {NavLink} from "react-router-dom";
 
-export const Posts = () => {
+export const Posts = props => {
     return (
         <div className="posts">
             <div className="posts__wrapper">
@@ -22,7 +22,7 @@ export const Posts = () => {
                                 </h4>
                             </div>
                             <div className="posts__buttons-wrapper">
-                                <button className="posts__button">Add to bookmarks</button>
+                                <button onClick={() => props.addPostToBookmarks(post.text)} className="posts__button">Add to bookmarks</button>
                                 <NavLink to="/post">
                                     <button className="posts__button">Read more</button>
                                 </NavLink>
