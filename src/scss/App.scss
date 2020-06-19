@@ -5,6 +5,7 @@
 @import '../components/PostsContainer/Posts/Posts';
 @import '../components/NavBarContainer/NavBar/NavBar';
 @import '../components/ProfileContainer/Profile/Profile';
+@import '../components/PostContainer/Post/Post';
 
 .app {
   font-family: 'Montserrat', sans-serif;
@@ -20,4 +21,19 @@
 .app-wrapper-content {
   max-width: 1200px;
   padding: 100px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.teacher-price-wrapper {
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  height: 30px;
+}
+
+.teacher-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 5px;
 }

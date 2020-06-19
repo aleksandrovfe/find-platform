@@ -1,5 +1,6 @@
 import React from 'react'
 import {landingData} from "../../../data/landingData";
+import {NavLink} from "react-router-dom";
 
 export const Posts = () => {
     return (
@@ -10,9 +11,21 @@ export const Posts = () => {
                         <li className="posts__post" key={post.id}>
                             <h3 className="posts__post-title">{post.title}</h3>
                             <p className="posts__post-text">{post.text}</p>
+                            <div className="posts__teacher-information">
+                                <img className="posts__teacher-avatar" src={post.avatar} alt=""/>
+                                <div className="posts__teacher-description-wrapper">
+                                    <h3 className="posts__teacher-name">{post.teacherName}</h3>
+                                    <p className="posts__teacher-experience">{post.experience} years of experience</p>
+                                </div>
+                                <h4 className="teacher-price-wrapper">
+                                    <p className="teacher-price">{post.price}$</p> per hour
+                                </h4>
+                            </div>
                             <div className="posts__buttons-wrapper">
                                 <button className="posts__button">Add to bookmarks</button>
-                                <button className="posts__button">Read more</button>
+                                <NavLink to="/post">
+                                    <button className="posts__button">Read more</button>
+                                </NavLink>
                             </div>
                         </li>
                     ))}
