@@ -1,8 +1,13 @@
 import React from 'react'
 import {Profile} from "./Profile/Profile";
+import {connect} from "react-redux";
 
-export const ProfileContainer = () => {
+const ProfileContainer = props => {
     return (
-        <Profile />
+        <Profile {...props}/>
     )
 }
+
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps, {})(ProfileContainer)

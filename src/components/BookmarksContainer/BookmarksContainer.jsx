@@ -1,8 +1,18 @@
 import React from 'react'
 import {Bookmarks} from "./Bookmarks/Bookmarks";
 
-export const BookmarksContainer = props => {
+import {connect} from "react-redux";
+
+const BookmarksContainer = props => {
     return (
-        <Bookmarks />
+        <Bookmarks {...props}/>
     )
 }
+
+const mapStateToProps = state => ({
+    favoritesList: state.bookmarks.favoritesList,
+})
+
+export default connect(mapStateToProps, {})(BookmarksContainer)
+
+

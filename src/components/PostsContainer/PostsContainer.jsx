@@ -1,20 +1,14 @@
 import React from 'react'
-import {Posts} from "./Posts/Posts";
+import {Post} from "./Post/Post";
 import {connect} from "react-redux";
 import {addPostToBookmarks} from "../../redux/BookmarksReducer";
 
-export const PostsContainer = props => {
-    console.log(props.addPostToBookmarks)
+const PostContainer = props => {
     return (
-        <Posts addPostToBookmarks={props.addPostToBookmarks}/>
+        <Post {...props}/>
     )
 }
 
-const mapStateToProps = state => ({
-    dataForBookmarks: state.bookmarks.dataForBookmarks,
-    act: state.bookmarks.act
-})
+const mapStateToProps = state => ({})
 
-connect(mapStateToProps, {
-    addPostToBookmarks
-})(PostsContainer)
+export default connect(mapStateToProps, {addPostToBookmarks})(PostContainer)

@@ -67,6 +67,7 @@ export const landingData = [
         avatar: 'https://images.pexels.com/photos/3623309/pexels-photo-3623309.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         teacherName: 'Sara Conor',
         experience: 3,
+        price: 5,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt tempora deleniti architecto saepe assumenda velit nostrum harum omnis. Nostrum modi ratione, voluptates corrupti nam quaerat soluta consectetur perferendis. Quod.',
     },
     {
