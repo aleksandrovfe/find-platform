@@ -22,7 +22,7 @@ export const Posts = props => {
                                 </h4>
                             </div>
                             <div className="posts__buttons-wrapper">
-                                <button onClick={() => props.addPostToBookmarks(post.text)} className="posts__button">Add to bookmarks</button>
+                                <button onClick={() => props.addPostToBookmarks(post.teacherName)} className="posts__button">Add to bookmarks</button>
                                 <NavLink to="/post">
                                     <button className="posts__button">Read more</button>
                                 </NavLink>

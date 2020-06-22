@@ -1,11 +1,11 @@
 import React from 'react';
 import './scss/App.scss';
-import {PostsContainer} from "./components/PostsContainer/PostsContainer";
 import {NavBarContainer} from "./components/NavBarContainer/NavBarContainer";
 import {Route} from "react-router-dom";
-import {ProfileContainer} from "./components/ProfileContainer/ProfileContainer";
-import {PostContainer} from "./components/PostContainer/PostContainer";
-import {BookmarksContainer} from "./components/BookmarksContainer/BookmarksContainer";
+import PostsContainer from "./components/PostsContainer/PostsContainer";
+import BookmarksContainer from "./components/BookmarksContainer/BookmarksContainer";
+import ProfileContainer from "./components/ProfileContainer/ProfileContainer";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 export const App = () => {
     return (

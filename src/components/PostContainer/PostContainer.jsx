@@ -1,8 +1,14 @@
 import React from 'react'
 import {Post} from "./Post/Post";
+import {connect} from "react-redux";
+import {addPostToBookmarks} from "../../redux/BookmarksReducer";
 
-export const PostContainer = () => {
+const PostContainer = props => {
     return (
-        <Post />
+        <Post {...props}/>
     )
 }
+
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps, {addPostToBookmarks})(PostContainer)
