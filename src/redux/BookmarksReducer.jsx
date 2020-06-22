@@ -2,7 +2,6 @@ const ADD_POST_TO_BOOKMARKS = 'ADD_POST_TO_BOOKMARKS'
 
 const initialState = {
     favoritesList: [],
-
 };
 
 export const BookmarksReducer = (state = initialState, action) => {

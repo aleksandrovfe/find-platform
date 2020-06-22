@@ -1,5 +1,6 @@
 import React from 'react'
 import {Bookmarks} from "./Bookmarks/Bookmarks";
+
 import {connect} from "react-redux";
 
 const BookmarksContainer = props => {
