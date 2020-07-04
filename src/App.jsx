@@ -6,6 +6,7 @@ import PostsContainer from "./components/PostsContainer/PostsContainer";
 import BookmarksContainer from "./components/BookmarksContainer/BookmarksContainer";
 import ProfileContainer from "./components/ProfileContainer/ProfileContainer";
 import PostContainer from "./components/PostContainer/PostContainer";
+import NewPostContainer from "./components/NewPostContainer/NewPostContainer";
 
 export const App = () => {
     return (
@@ -16,6 +17,7 @@ export const App = () => {
                 <Route path="/profile" render={() => <ProfileContainer />} />
                 <Route path="/post" render={() => <PostContainer />} />
                 <Route path="/bookmarks" render={() => <BookmarksContainer />} />
+                <Route path="/new-post" render={() => <NewPostContainer />} />
             </div>
         </div>
     );
