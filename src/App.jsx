@@ -7,6 +7,7 @@ import BookmarksContainer from "./components/BookmarksContainer/BookmarksContain
 import ProfileContainer from "./components/ProfileContainer/ProfileContainer";
 import PostContainer from "./components/PostContainer/PostContainer";
 import NewPostContainer from "./components/NewPostContainer/NewPostContainer";
+import AuthorizationContainer from "./components/AuthorizationContainer/AuthorizationContainer";
 
 export const App = () => {
     return (
@@ -18,6 +19,7 @@ export const App = () => {
                 <Route path="/post" render={() => <PostContainer />} />
                 <Route path="/bookmarks" render={() => <BookmarksContainer />} />
                 <Route path="/new-post" render={() => <NewPostContainer />} />
+                <Route path="/auth" render={() => <AuthorizationContainer />} />
             </div>
         </div>
     );
