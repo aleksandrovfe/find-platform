@@ -1,50 +1,40 @@
-import React, { useState} from 'react'
-import {auth} from "../../firebase/firebaseInfo";
+import React, {useEffect, useState} from 'react'
+import firebase from "firebase";
 import {connect} from "react-redux";
-import {setUserData} from "../../redux/AuthorizationReducer";
 
 const AuthorizationContainer = props => {
-    const [userName, setUserName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
-    const signUp = (event) => {
-        event.preventDefault()
-        //
-        // auth.createUserWithEmailAndPassword(email, password)
-        //     .then(authUser => {
-        //         return authUser.user.updateProfile({
-        //             displayName: userName
-        //         })
-        //     })
-        //     .catch((error) => alert(error.message))
+    const [isSignedIn, setIsSignedIn] = useState(false)
+    const [user, setUser] = useState(null)
+    const uiConfig = {
+        signInFlow: 'popup',
+        signInOptions: [
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        ],
+        callbacks: {
+            signInSuccess: () => false,
+        }
     }
-
-    const signIn = (event) => {
-        event.preventDefault()
-
-        // auth.signInWithEmailAndPassword(email, password)
-        //     .catch((error) => alert(error.message))
-    }
-
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged(user => {
+            setIsSignedIn(!!user)
+            setUser(user)
+            // console.log(user)
+        })
+    }, [])
     return (
         <div>
             <div>Auth</div>
-            {
-                !props.userData ? (<div>
-                    <form action="">
-                        <input type="text" placeholder='User name' onChange={(e) => setUserName(e.target.value)}/>
-                        <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
-                        <input type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
-                        <button onClick={signUp}>Sign up</button>
-                    </form>
-                    <form action="">
-                        <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
-                        <input type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
-                        <button onClick={signIn}>Sign in</button>
-                    </form>
-                </div>)
-                    : (<button>Logout</button>)
+            {isSignedIn
+                ? <div>
+                    <button onClick={() => firebase.auth().signOut()}>Sign out</button>
+                    <img src={firebase.auth().currentUser.photoURL} alt=""/>
+                    <h1>{firebase.auth().currentUser.displayName}</h1>
+                    </div>
+
+                : <StyledFirebaseAuth
+                    uiConfig={uiConfig}
+                    firebaseAuth={firebase.auth()}
+                />
             }
         </div>
     )

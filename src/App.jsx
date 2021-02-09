@@ -22,7 +22,6 @@ const App = ({userData, setUserData}) => {
                 setUserData(null)
             }
         })
-
         return () => unsubscribe()
     }, [setUserData, userData])
 
