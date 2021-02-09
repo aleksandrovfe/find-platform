@@ -14,17 +14,6 @@ import {auth} from "./firebase/firebaseInfo";
 import {setUserData} from "./redux/AuthorizationReducer";
 
 const App = ({userData, setUserData}) => {
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged((authUser) => {
-            if (authUser) {
-                setUserData(authUser)
-            } else {
-                setUserData(null)
-            }
-        })
-        return () => unsubscribe()
-    }, [setUserData, userData])
-
     return (
         <div className="app">
             <NavBarContainer />
