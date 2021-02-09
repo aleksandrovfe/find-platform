@@ -1,33 +1,16 @@
 import React from 'react'
-import {Field, reduxForm} from "redux-form";
-import {maxLengthCreator, requiredField} from "../../../utils/FormFieldsValidator";
-import {Input, TextArea} from "../../Common/FormsControls/FormContrlos";
 
-const maxLength140 = maxLengthCreator(140)
 
-const FormNewPost = props => {
+export const NewPost = ({title, description, price, setTitle, setDescription, setPrice, handleSubmit}) => {
     return (
-        <div>
+        <div className="new-post">
             <h1>New post</h1>
-            <form onSubmit={props.handleSubmit}>
-                <div>
-                    <Field validate={[requiredField]} component={Input} placeholder={"Title"} name={"title"} />
-                </div>
-                <div>
-                    <Field validate={[requiredField, maxLength140]}  component={TextArea} placeholder={"Short description"} name={"shortDescription"} />
-                </div>
-                <div>
-                    <Field validate={[requiredField]} component={Input} placeholder={"Description"} name={"description"} />
-                </div>
-                <div>
-                    <button>New Post</button>
-                </div>
-            </form>
+            <input type="text" placeholder='title' value={title} onChange={event => setTitle(event.target.value)} />
+            <input type="text" placeholder='description' value={description} onChange={event => setDescription(event.target.value)} />
+            <input type="text" placeholder='price' value={price} onChange={event => setPrice(event.target.value)} />
+            <button onClick={handleSubmit}>Post</button>
         </div>
     )
 }
 
-export const NewPost = reduxForm({
-    form: 'new-post'
-})(FormNewPost)
 
