@@ -1,8 +1,15 @@
 import React from 'react'
 import {NavBar} from "./NavBar/NavBar";
+import {connect} from "react-redux";
 
-export const NavBarContainer = () => {
+const NavBarContainer = (props) => {
     return (
-        <NavBar />
+        <NavBar {...props}/>
     )
 }
+
+const mapStateToProps = state => ({
+    userData: state.auth.userData,
+})
+
+export default connect(mapStateToProps, {})(NavBarContainer)

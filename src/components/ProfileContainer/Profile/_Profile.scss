@@ -1,6 +1,43 @@
 .profile {
+  display: flex;
 
-  &__back {
+  &__avatar {
+    width: 250px;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  &__posts-wrapper {
     width: 100%;
+    margin-left: 30px;
+  }
+
+  &__add-post {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255,255,255, 0.8);
+    border: 1px dashed black;
+  }
+
+  &__modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__modal {
+    display: grid;
+    grid-gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255, 0.8);
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
   }
 }
